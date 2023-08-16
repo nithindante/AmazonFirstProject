@@ -47,7 +47,7 @@ public void Tabhandling()
 }
 public void clickonaddtocart() throws InterruptedException {	
 	waittill(cartbutton);
-	Thread.sleep(2000);
+	//Thread.sleep(2000);
 	driver.findElement(cartbutton).click();	
 }
 public void addtowishlist()
@@ -77,7 +77,7 @@ public void customisebutton() throws InterruptedException
 {
 	driver.findElement(customisebuton).click();
 	waittill(uploadbutton);
-	Thread.sleep(2000);
+	//Thread.sleep(2000);
 	driver.findElement(uploadbutton).click();
 }
 public Cartpage fileupload(String filepath) throws AWTException, InterruptedException {
@@ -90,7 +90,7 @@ public Cartpage fileupload(String filepath) throws AWTException, InterruptedExce
 	rob.keyRelease(KeyEvent.VK_V);
 	rob.keyRelease(KeyEvent.VK_CONTROL);
 	rob.keyPress(KeyEvent.VK_ENTER);
-	Thread.sleep(6000);
+	//Thread.sleep(6000);
 	driver.findElement(customiseaddtocart).click();
 	return new Cartpage(driver);
 }

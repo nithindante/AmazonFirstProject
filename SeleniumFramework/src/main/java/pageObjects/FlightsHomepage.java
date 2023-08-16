@@ -22,13 +22,9 @@ By nextbutton = By.xpath("//button[@class='_4a388932']");
 public void enterdetailsoffromairport(String departureairport) throws InterruptedException {  
 	waittill(fromairport);
 	driver.findElement(fromairport).click();
-	Thread.sleep(3000);
 	driver.findElement(By.xpath("//input[@name=\"searchText\"]")).sendKeys(departureairport); 
 	By dropdown = By.xpath("//p[contains(text(),'"+departureairport+"')]");
-	waittill(dropdown);
-	waittill(dropdown);
-	waittill(dropdown);
-	Thread.sleep(2000);
+	waittill(dropdown);	
 	driver.findElement(dropdown).click();
 }
 public void enterdetailsoftoairport(String arrivalairport) throws InterruptedException
@@ -37,8 +33,6 @@ public void enterdetailsoftoairport(String arrivalairport) throws InterruptedExc
 	driver.findElement(toairport).sendKeys(arrivalairport); 
 	By dropdown = By.xpath("//p[contains(text(),'"+arrivalairport+"')]");
 	waittill(dropdown);
-	waittill(dropdown);
-	Thread.sleep(2000);
 	driver.findElement(dropdown).click();
 } 
 

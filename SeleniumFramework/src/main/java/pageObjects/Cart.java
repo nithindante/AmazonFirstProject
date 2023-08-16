@@ -25,7 +25,6 @@ public List<WebElement> cartlist()
 }
 public void youalsolike() {
 	 WebElement item = cartlist().stream().filter(product->product.findElement(By.cssSelector("img")).getAttribute("alt").equalsIgnoreCase("Meyer Pre-Seasoned Cast Iron Frypan | Cast Iron Skillet | Iron Pan | Induction Frying Pan | Iron Fry Pan | Omlette Pan | Cast Iron Utensils for Cooking | Iron Cookware for Kitchen, 22cm, Black")).findFirst().orElse(null);
-	System.out.println(item); 
 	item.findElement(By.id("a-autoid-12-announce")).click();	
 }
 

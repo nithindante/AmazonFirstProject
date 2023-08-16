@@ -27,7 +27,6 @@ public Checkoutpage addtocheckout()
 
 public void redirecttocart() throws InterruptedException
 {
-	Thread.sleep(4000);
 	driver.findElement(redirecttocartbutton).click();
 }
 
@@ -36,8 +35,5 @@ public Productresults searchitem(String productname)
 	driver.findElement(searchbar).sendKeys(productname + Keys.ENTER);
 	return new Productresults(driver);		
 }
-
-
-
 
 }

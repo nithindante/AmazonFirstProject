@@ -53,14 +53,11 @@ public class TravellersDetailsPage extends AbstractComponents{
 	public void enterdetailsofchild(String fname,String lname,String year,String month,String exactdate) throws InterruptedException
 	{	
 		waittill(addnewchild);
-		getrows().get(1).findElement(By.xpath("parent::div/preceding-sibling::div//span")).click();
-		Thread.sleep(3000);
+		getrows().get(1).findElement(By.xpath("parent::div/preceding-sibling::div//span")).click();		
 		getrows().get(1).findElement(By.id("input-firstName")).sendKeys(fname);
-		Thread.sleep(3000);
-		getrows().get(1).findElement(By.id("input-lastName")).sendKeys(lname);
-		Thread.sleep(3000);  
+		getrows().get(1).findElement(By.id("input-lastName")).sendKeys(lname);		
 		driver.findElement(calender).click();
-		Thread.sleep(3000); 
+		
 				while(!driver.findElement(By.xpath("//a[@class='rc-calendar-year-select']")).getText().equalsIgnoreCase(year))
 				{
 					driver.findElement(By.xpath("//a[@title='Previous month (PageUp)']")).click();
