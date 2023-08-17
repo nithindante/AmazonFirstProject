@@ -46,6 +46,7 @@ public void selectitem(String productname) throws InterruptedException
 	Thread.sleep(2000);
 	WebElement nextelement = item.findElement(By.xpath("div[@class='sc-list-item-content']//div//div[@class='sc-item-content-group']/child::div//span[@data-feature-id=\"delete\"]//span//input"));
 	nextelement.click();
+	System.out.println();
 }
 public String assertif()
 {
